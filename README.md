@@ -24,8 +24,8 @@ The features implemented with this project are:
 To get a local copy of the repository please run the following commands on your terminal:
 
 ```
-$ git clone git@github.com:CalyCherkaoui/my-library-js.git
-$ cd my-library-js
+$ git clone git@github.com:CalyCherkaoui/Library-FactoriesFunc-JS.git
+$ cd Library-FactoriesFunc-JS
 $ git checkout development
 ```
 
