@@ -7,45 +7,61 @@
     <link rel="stylesheet" href="asset/css/style.css">
   </head>
   <body>
-    <table>
-      <tr>
-        <th>Title</th>
-        <th>Author</th>
-        <th>Page numbres</th>
-        <th>read</th>
-        <th>delete</th>
-      </tr>
-
-    </table>
-
-    <div class="user_input">
-      <button id="addbook_btn">
-        add book
-      </button>
-      <div id="addbook_form" class="hide_element">
-        <form >
-          <label for="title">Title:</label><br>
-          <input type="text" id="title" name="title" placeholder="Book title" required><br>
-          <label for="author">Author:</label><br>
-          <input type="text" id="author" name="author" placeholder="Book author" required><br>
-          <label for="pagesnum">Pages number:</label><br>
-          <input type="number" name="pagesnum" id="pagesnum" placeholder="Pages numbers" required><br>
+    <h1 class="title_header">My Mini Library</h1>
+    <div class="global_container">
+      <div class="user_input">
+          <button id="addbook_btn">
+            <svg viewBox="0 0 16 16" class="bi bi-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+            </svg>
+            Add Book
+          </button>
+        <div id="addbook_form" class="hide_element">
+          <form>
+            <div class="field">
+              <label for="title">Title:</label>
+              <input type="text" id="title" name="title" placeholder="Book title" required>
+            </div>
+            <div class="field">
+              <label for="author">Author:</label>
+              <input type="text" id="author" name="author" placeholder="Book author" required>
+            </div>
+            <div class="field">
+              <label for="pagesnum">Pages number:</label>
+              <input type="number" name="pagesnum" id="pagesnum" placeholder="Pages numbers" required>
+            </div>
+    
+            <fieldset id="read" class="radio">
+              <div class="field_radio">
+                <label for="readtrue">Already read it:</label>
+                <input type="radio" id="readtrue" name="read" value="true">
+              </div>
+              <div class="field_radio">
+                <label for="readfalse">Haven't Read it yet:</label>
+                <input type="radio" id="readfalse" name="read" value="false" checked>
+              </div>
+            </fieldset>
   
-          <fieldset id="read" class="radio">
-            <label for="readtrue">Already read it:</label><br>
-            <input type="radio" id="readtrue" name="read" value="true"><br>
-            <label for="readfalse">Haven't Read it yet:</label><br>
-            <input type="radio" id="readfalse" name="read" value="false" checked><br>
-          </fieldset>
-
-        </form>
-        <button id='submit_book_data'>
-          Submit Book info
-        </button>
-        <button id='cancel_book_data'>
-          Cancel
-        </button>
+          </form>
+          <div class="form_buttons">
+            <button id='submit_book_data'>
+              Submit Book info
+            </button>
+            <button id='cancel_book_data'>
+              Cancel
+            </button>
+          </div>
+        </div>
       </div>
+      <table>
+        <tr class='tr_header'>
+          <th class="th_header">Title</th>
+          <th class="th_header">Author</th>
+          <th class="th_header">Pages</th>
+          <th class="th_read"></th>
+          <th class="th_delete"></th>
+        </tr>
+      </table>
     </div>
     <script src="asset/script/main.js"></script>
   </body>

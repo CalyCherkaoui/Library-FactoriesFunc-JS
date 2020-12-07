@@ -1,3 +1,226 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+html {
+  display: block;
+}
+
+body {
+  width: 100%;
+  display: block;
+    /* background-color:  #17202a; */
+}
+
+.title_header {
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+}
+
+.global_container {
+  /* background-color:  #17202a; */
+  min-height: 90vh;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 5%;
+  border-radius: 5px;
+  box-shadow: 0 16px 24px 2px  rgba(0, 0, 0, 0.1),
+              0 6px  10px 5px  rgba(0, 0, 0, 0.1),
+              0 8px  10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.user_input {
+  width: 100%;
+  margin-bottom: 1rem;
+  /* background-color: aqua; */
+}
+
+#addbook_btn {
+  width: 100%;
+  padding: 1rem;
+  /* background-color: #428bca; */
+  background-color: rgba(190,227,248,1);
+  font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  color: rgba(66,153,225,1);
+  border: 1px solid #03045e;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-items: center;
+}
+
+#addbook_btn:hover {
+  color: white;
+  background-color: rgba(66,153,225,1);
+}
+
+svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+#addbook_form {
+  width: 100%;
+  /* background-color: teal; */
+  margin-top: 1rem;
+  padding: 5%;
+}
+
+form {
+  width: 100%;
+  /* background-color: tomato; */
+  padding: 1rem 0;
+}
+
+.field,
+.field_radio {
+  padding: 1rem 2rem 1rem 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input[type='text'],
+input[type='number'] {
+  border: none;
+  border-bottom: 1px solid #03045e;
+  padding: 0.3rem 0.7rem;
+  /* background-color: rgba(190,227,248,1); */
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(22, 121, 202);
+}
+
+
+label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: #03045e;
+}
+
+fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  border: 2px dashed;
+  border-radius: 3px;
+  justify-content: center;
+  align-items: center;
+}
+
+.form_buttons {
+  width: 100%;
+  /* background-color: violet; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-items: center;
+}
+
+#submit_book_data,
+#cancel_book_data {
+  padding: 0.5rem;
+  margin: 0;
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#submit_book_data {
+  width: 69.9%;
+  border: 1px solid rgba(104,211,145,1);
+  color: rgba(104,211,145,1);
+  background-color: rgba(240,255,244,1);
+}
+
+#submit_book_data:hover {
+  background-color:rgba(56,161,105,1);
+  color: white;
+}
+
+#cancel_book_data {
+  width: 30%;
+  border: 1px solid rgba(229,62,62,1);
+  color: rgba(229,62,62,1);
+  background-color:rgba(255,245,245,1);
+}
+
+#cancel_book_data:hover {
+  background-color: rgba(229,62,62,1);
+  color: white;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  /* background-color: thistle; */
+}
+
+tr:nth-child(even) {
+  background-color: rgba(240,255,244,1);
+}
+
+.th_header {
+  padding: 0.5rem 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  border-bottom: 2px solid #03045e;
+  text-align: left;
+}
+
+.th_read {
+  width: 15%;
+}
+
+.reading_status {
+  padding: 0.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  width: 99%;
+  border: 1px dashed #e5e5e5;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.reading_status:hover {
+  background-color: #03045e;
+  color: white;
+}
+
+.th_delete {
+  width: 5%;
+}
+
+.remove_book {
+  padding: 0.5rem;
+  border: 1px solid rgba(229,62,62,1);
+  color: rgba(229,62,62,1);
+  font-family: Arial, Helvetica, sans-serif;
+  background-color:rgba(255,245,245,1);
+  border-radius: 5px;
+}
+
+.remove_book:hover {
+  background-color: rgba(229,62,62,1);
+  color: white;
+}
+
 .hide_element {
   display: none;
 }

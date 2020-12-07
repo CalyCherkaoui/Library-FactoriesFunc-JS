@@ -51,7 +51,10 @@ function addBookToPage(title, author, pageNums, read, libcount) {
   const readTd = document.createElement('td');
   const readBtn = document.createElement('button');
   readBtn.classList.add('reading_status');
-  readBtn.textContent = read;
+  console.log( typeof(read));
+  console.log( read );
+  readBtn.textContent = ( read ? 'Already Read!' : 'Not Read Yet!' );
+
   readBtn.setAttribute('id', `read_${libcount}`);
   readBtn.dataset.indexNumber = libcount;
   readTd.appendChild(readBtn);
@@ -61,13 +64,13 @@ function addBookToPage(title, author, pageNums, read, libcount) {
     const index = e.target.dataset.indexNumber;
     const i = findBook(index);
     changeReadStatus(i);
-    e.target.textContent = myLibrary[i].read;
+    e.target.textContent = (myLibrary[i].read ? 'Already Read!' : 'Not Read Yet!');
   });
 
   const removeTd = document.createElement('td');
   const removeBtn = document.createElement('button');
   removeBtn.classList.add('remove_book');
-  removeBtn.textContent = 'Delete Book';
+  removeBtn.textContent = 'Delete';
   removeTd.appendChild(removeBtn);
   row.appendChild(removeTd);
   table.appendChild(row);
@@ -82,7 +85,6 @@ function addBookToPage(title, author, pageNums, read, libcount) {
     table.removeChild(target);
   });
 }
-
 
 const addBookToLibrary = (title, author, pageNums, read = false) => {
   count = +1;
@@ -120,7 +122,6 @@ submitBtn.addEventListener('click', () => {
   let read = document.querySelector('input[name="read"]:checked').value;
   read = read === 'true';
   addBookToLibrary(title, author, pagesnum, read);
-  // myLibrary[myLibrary.length - 1].addBookToPage();
   const addBookForm = document.querySelector('#addbook_form');
   addBookForm.classList.toggle('hide_element');
   localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
